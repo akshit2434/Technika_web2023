@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo");
+@import url("https://fonts.googleapis.com/css2?family=Raleway");
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+@import url("https://fonts.googleapis.com/css2?family=B612+Mono");
+* {
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
+}
+a:active {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+#navbar {
+  position: fixed;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  width: 100vw;
+  text-align: center;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  background: rgba(126, 126, 126, 0.103);
+  box-shadow: 0 8px 32px 0 rgba(131, 131, 131, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 0 0px 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+#navbar .logo {
+  background-image: url("../assets/img/logomin.png");
+  height: 120px;
+  width: 120px;
+  background-size: contain;
+  background-position: center;
+  display: inline-block;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50px;
+  cursor: pointer;
+}
+#navbar .items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  transform: translateY(-50%);
+  margin-right: 50px;
+  float: right;
+  color: rgb(206, 203, 203);
+}
+#navbar .items li {
+  display: inline-block;
+  font-family: "Raleway";
+  margin: 0 20px 0 20px;
+  font-size: 30px;
+  margin-left: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: 0.2s ease;
+}
+#navbar .items li:hover {
+  color: rgb(114, 114, 114);
+}
+
+body {
+  background-color: #1b1b1b;
+}
+
+.content {
+  font-family: Open Sans;
+  margin-top: 140px;
+  padding: 20px;
+}
+.content * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.content #contact_h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 50px;
+  margin-top: 100px;
+  color: rgb(206, 203, 203);
+}
+.content .sticky_h2 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 150px;
+  margin: 0;
+  border-radius: 550px;
+  z-index: 10;
+  display: inline-block;
+  padding: 10px 30px;
+  background: rgba(63, 63, 63, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(131, 131, 131, 0.15);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  margin: 20px 0;
+  border: 1px solid rgba(255, 255, 255, 0.034);
+}
+.content .sticky_h2 h2 {
+  font-size: 2em;
+  color: rgb(206, 203, 203);
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-left: 10px;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.flexbox {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-template-columns: auto auto auto;
+  grid-gap: 50px;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+
+.card {
+  height: 250px;
+  width: 550px;
+  background-color: #1b1b1b;
+  border-radius: 50px;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(58, 58, 58, 0.3);
+  padding: 50px;
+  color: rgb(206, 203, 203);
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.card:hover {
+  transform: scale(0.99);
+  box-shadow: 8px 8px 26px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(58, 58, 58, 0.3);
+}
+.card:hover .cardimg {
+  border-radius: 50%;
+  border: 4px solid #969494;
+}
+.card h1 {
+  text-align: center;
+  margin-left: 20px;
+}
+.card p {
+  text-align: center;
+  color: rgb(206, 203, 203);
+}
+.card .cardimg {
+  transition: 0.3s ease;
+  width: 40%;
+  border-radius: 50%;
+  border: 1px solid #969494;
+  background: #b5b5b5;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20%;
+}
+.card .cardimg:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.card .buttons {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.card .buttons div {
+  background-color: #1b1b1b;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.4), -8px -8px 12px 0 rgba(58, 58, 58, 0.4);
+  padding: 10px;
+  transition: 0.5s ease;
+  margin: 0 10px;
+}
+.card .buttons div:hover {
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.3), -4px -4px 6px 0 rgba(58, 58, 58, 0.3);
+}
+.card .buttons div svg {
+  transition: 0.5s ease;
+  fill: rgb(206, 203, 203);
+  vertical-align: middle;
+  height: 40px;
+  width: 40px;
+}
+.card .buttons .insta:hover svg {
+  fill: #cc74c5;
+}
+.card .buttons .discord:hover svg {
+  fill: #806ad6;
+}
+.card .buttons .none {
+  pointer-events: none;
+  box-shadow: 6px 6px 4px 0 rgba(0, 0, 0, 0.2) inset, -4px -4px 3px 0 rgba(58, 58, 58, 0.2) inset;
+}
+.card .buttons .none svg {
+  fill: grey;
+}
+
+#footer {
+  background-color: #131518;
+  color: rgb(238, 238, 238);
+  font-family: Poppins;
+  padding: 10px 0px 10px 10px;
+  border-top: 2px solid whitesmoke;
+}
+#footer .content {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+#footer .content h1 {
+  font-family: Poppins;
+  text-decoration: none;
+  font-weight: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 4rem;
+}
+#footer .content .contacts {
+  display: inline-grid;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto;
+}
+#footer .content .contacts div .email {
+  transition: 0.5s ease;
+}
+#footer .content .contacts div .email:hover {
+  color: #e2c368;
+}
+#footer .content .contacts div .phone {
+  transition: 0.5s ease;
+}
+#footer .content .contacts div .phone:hover {
+  color: #398cea;
+}
+#footer .content .contacts div .discord {
+  transition: 0.5s ease;
+}
+#footer .content .contacts div .discord:hover {
+  color: #9c7af3;
+}
+#footer .content .contacts p {
+  font-size: 1em;
+}
+#footer .content .contacts p .material-icons {
+  font-size: 1em;
+  transform: translateY(0.11em);
+}
+#footer .content .contacts p .material-icons a {
+  transition: 1s;
+}
+#footer #map {
+  margin-right: 20px;
+  width: 40%;
+  height: 400px;
+  margin-left: 100px;
+}
+
+.credits {
+  min-height: 20px;
+  width: 100vw;
+  background-color: rgb(19, 19, 19);
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.credits h2 {
+  font-family: Poppins;
+  color: white;
+  font-weight: normal;
+  font-size: 1.2em;
+  margin: 0;
+  margin-right: 30px;
+  position: absolute;
+  padding-right: 30px;
+  width: 100%;
+}
+.credits p {
+  margin-top: 10px;
+  color: #c0c0c0;
+}
+
+@media screen and (min-width: 700px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #0D1821;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6D9DC5;
+    border-radius: 5px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(61, 101, 177);
+  }
+}/*# sourceMappingURL=contact.css.map */

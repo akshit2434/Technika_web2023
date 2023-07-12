@@ -1,14 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Technika 2023</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Home | Technika</title>
+  
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/index-mobile.css">
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/7/Stats.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.7/build/dat.gui.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script defer src="js/index2.js"></script>
+
+  <link rel="shortcut icon" href="assets/img/logo_icon.png" type="image/x-icon">
 </head>
+
 <body>
-    <h1>Technika 2023</h1>
+  <div class="modal_cover"></div>
+  <div class="modal">
+    <span class="material-icons close">close</span>
+    <h1 class="heading">Digital Imaging</h1>
+    <p class="text"></p>
+  </div>
+
+
+  <div class="pc"></div>
+  <div id="navbar">
+    <div class="logo" onclick="openpage('index.html', '_self')"></div>
+    <ul class="items">
+      <li id="home"><a href="#first-page">Home</a></li>
+      <!-- <li><a href="#second-page">Info</a></li> -->
+      <li><a href="#third-page">Events</a></li>
+      <li><a target="_self" href="contactus.html">Contact Us</a></li>
+      <li><a target="_blank" href="assets/TECHNIKA CSI BROCHURE.pdf">Brochure</a></li>
+        <!-- <li>Contact Us</li> -->
+    </ul>
+  </div>
+  <!-- <div class="hamburger-menu">
+      <span class="material-icons">
+        menu
+      </span>
+    </div> -->
+  <div id="body">
+    <div id="loader">
+      <div id="loadergif"></div>
+    </div>
+    <div class="pages" id="first-page">
+      <div id="intro-div">
+        <div class="container">
+          <h1 class="intro opensans">
+            <span class="hey">Welcome</span> <span id="im">to</span></br><span style="font-size: 60px;"> </span>
+            <span id="info"></span>
+          </h1>
+          <!-- <p id="pinfo" class="fade-enter">After 6 successful editions of Infoyage-</br>The Annual IT Fest and 3 successful editions of Newtonium-<br>The inter school Science and Math fest<br>Cambridge School, Indirapuram welcomes you all to be a part of the endeavor of hosting its first S.T.E.M. Fest, TECHNIKA<br><br></p> -->
+          <!-- <p id="pinfo" class="fade-enter"><span id="comingsoon">Coming Soon!</span></p> -->
+          <div id="knowmorebtn" class="fade-enter">
+            <!-- <a href="#second-page">Explore More</a> -->
+            <a href="https://linktr.ee/technika2022" target="_blank">Register Now</a>
+          </div>
+        </div>
+        <div id="countdown_container">
+          <p>Starting on</p>
+          <h1>19th October 2022</h1>
+          <div id="countdown">
+            <div id="day"><h2>Days</h2><p class="dvalue">01</p></div>
+            <div id="hour"><h2>Hours</h2><p class="hvalue">01</p></div>
+            <div id="min"><h2>Minutes</h2><p class="mvalue">01</p></div>
+            <div id="sec"><h2>Seconds</h2><p class="svalue">01</p></div>
+          </div>
+        </div>
+        <canvas id="skillcanvas"></canvas>
+      </div>
+    </div>
+    <div id="after-wave">
+      <div class="" id="second-page">
+        <!-- SVG Wave -->
+        <div class="ocean" id="spwave">
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+        </div>
+
+        <div class="content">
+          <!-- <div id="info_grid">
+            <div>
+              <h1 class="opensans">Technika</h1>
+              <p>After 6 successful editions of Infoyage-    The Annual IT Fest and 3 successful editions of Newtonium-    The inter school Science and Math fest<br><br><b>Cambridge School, Indirapuram welcomes you all to be a part of the endeavor of hosting its third consecutive annual  S.T.E.M. Fest, <strong>Technika</strong></b></span></p>
+            </div>
+          </div> -->
+          <!-- <br> -->
+          <!-- <br> -->
+          <!-- <div id="events_indicator">
+            <a href="#third-page">
+              <h1 class="opensans">Events</h1>
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                <path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" />
+              </svg>
+            </a>
+          </div> -->
+
+        </div>
+      </div>
+      <div class="" id="third-page">
+        <div class="content">
+          <div id="events-grid">
+            <div>
+              <h1 class="opensans">Events</h1>
+              <div id="events-card">
+                <div class="event-card" onclick='brochure(9)'>
+                  <div style="background: url('assets/img/icons/digital\ imaging2.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info" >
+                    <h2>Digital Imaging</h2>
+                    <p>Are you keen on designing and working in photoshop? This is for you!...</p>
+                  </div>
+                </div>
+
+                <div class="event-card" onclick='brochure(16)'>
+                  <div style="background: url('assets/img/icons/contri.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Ideation</h2>
+                    <p>Present your views through a presentation, we are here to hear you.</p>
+                  </div>
+                </div>
+
+                <div class="event-card" onclick='brochure(3)'>
+                  <div style="background: url('assets/img/icons/incryptx.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>INCRYPT-[X]</h2>
+                    <p>Hunt it is, try your best to crack the clues, as it is what you need to own the hunt.</p>
+                  </div>
+                </div>
+
+                <div class="event-card" onclick='brochure(5)'>
+                  <div style="background: url('assets/img/icons/gaming.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Gaming</h2>
+                    <p>All the gamers, it's your chance now. Win and compete to get the maximum point and get the title.</p>
+                  </div>
+                </div>
+
+                <div class="event-card" onclick='brochure(15)'>
+                  <div style="background: url('assets/img/icons/gp.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Ponder Realms</h2>
+                    <p>Work on the topic, present the views, and get ready for the questioning as questions are the best way to improve.</p>
+                  </div>
+                </div>
+
+                <div class="event-card" onclick='brochure(7)'>
+                  <div style="background: url('assets/img/icons/programming.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Programming</h2>
+                    <p>Hackerrank waiting for you all, why delay it join now to experience programming the best way one can imagine.</p>
+                  </div>
+                </div>
+
+                <div class="event-card" onclick='brochure(13)'>
+                  <div style="background: url('assets/img/icons/relayrush.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Relay Rush</h2>
+                    <p>Hold hands together teammates, its relays some mathematical problems, and solve them to conquer them.</p>
+                  </div>
+                </div>
+
+                <!-- <div class="event-card" onclick='brochure(15)'>
+                  <div style="background: url('assets/img/icons/ankashaastra.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Ankashastra</h2>
+                    <p>Each team will choose a topic connected to Mathematics and prepare a PPT on how one can relate the topic to address a Sustainable Development Problem, and find appropriate solutions using Mathematics...</p>
+                  </div>
+                </div> -->
+
+                <div class="event-card" onclick='brochure(12)'>
+                  <div style="background: url('assets/img/icons/live\ quiz.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Quizotron</h2>
+                    <p>Hey yes, it's the same quiz we know but with twists and interesting questions to challenge your knowledge. You ready??</p>
+                  </div>
+                </div>
+
+                <!-- <div class="event-card" onclick='brochure(13)'>
+                  <div style="background: url('assets/img/icons/vrittlekh.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Vrittlekh</h2>
+                    <p>Participants must have proper knowledge of historical events related to Mathematics- ideas, inventions, and discoveries made by prominent mathameticians...</p>
+                  </div>
+                </div> -->
+
+                <!-- <div class="event-card" onclick='brochure(11)'>
+                  <div style="background: url('assets/img/icons/reinvented.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Reinvented</h2>
+                    <p>The participants will have to take any particular invention and explain what it would be in the current situation if they had invented it and how it would be different and better than the current object...</p>
+                  </div>
+                </div> -->
+
+                <div class="event-card" onclick='brochure(8)'>
+                  <div style="background: url('assets/img/icons/video.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Blendvid.avi</h2>
+                    <p>Video making the most interesting thing using top-notch software. Offers a great experience and for that join us now.</p>
+                  </div>
+                </div>
+
+                <div class="event-card" onclick='brochure(6)'>
+                  <div style="background: url('assets/img/icons/webd.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Web-D</h2>
+                    <p>HTML, CSS, JS. Does this ring a bell? Show all you got on competing to make the best webapp!</p>
+                  </div>
+                </div>
+
+                <div class="event-card" onclick='brochure(4)'>
+                  <div style="background: url('https://technicalfinger.co.uk/wp-content/uploads/2017/12/Technical-Finger-Music-Producer-Seaview-Recording-Studio-Folkestone-Mixing-Console-300x300.png'); " class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Music Production</h2>
+                    <p>We all like to vibe upon the music of our taste. But ever thought to create them?? Attempt here once.</p>
+                  </div>
+                </div>
+
+                <div class="event-card" onclick='brochure(10)'>
+                  <div style="background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh7dsuGqEMJjaZM7cj0B2WKAzLZisQ59c_pg&usqp=CAU');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Grid Clash</h2>
+                    <p>Ever experience clashes? No worries mathematical clashes are the best to ever experience.</p>
+                  </div>
+                </div>
+
+                <div tooltip="Click to know more" class="event-card" onclick='brochure(11)'>
+                  <div style="background: url('https://cdn-icons-png.flaticon.com/512/2106/2106434.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Math Show-biz</h2>
+                    <p>Enactment can't be related to maths? Let's burst this myth, enact it along with your teammates and explain the maths concepts.</p>
+                  </div>
+                </div>
+                
+                <div class="event-card" onclick='brochure(12)'>
+                  <div style="background: url('https://runwildmychild.com/wp-content/uploads/2022/01/treasure-hunt-icons-2.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Treasure Hunt</h2>
+                    <p>Never found treasure in real life?? Well, we offer you a chance to grab this pack of treasure-filled joy and interesting experiences.</p>
+                  </div>
+                </div>
+
+                <div class="event-card" onclick='brochure(17)'>
+                  <div style="background: url('https://cdn-icons-png.flaticon.com/512/5205/5205074.png');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Scicathon</h2>
+                    <p>Solve the questions to decode your success in the event and grab the trophy, teammates pull up your socks as it's your chance now.</p>
+                  </div>
+                </div>
+
+                <div class="event-card" onclick='brochure(18)'>
+                  <div style="background: url('https://mpng.subpng.com/20191203/irf/transparent-careers-men-icon-researcher-icon-scientist-icon-5de63d82881e30.1303157615753701145575.jpg');" class="img"></div>
+                  <div class="cover"></div>
+                  <div class="info">
+                    <h2>Reflect Persona</h2>
+                    <p>Be a scientist and justify their name, and idealize the discovery they could have made.</p>
+                  </div>
+                </div>
+
+
+
+
+              </div>
+              <a class="more_info" href="assets/TECHNIKA CSI BROCHURE.pdf">>>More info on Events</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div id="our-team">
+          <div id="ourteam_content">
+            <div id="team-pic">
+
+            </div>
+            <div class="team-info">
+              <div id="team-redirect">
+                <a href="ourteam/">Meet the Team <span class="material-icons">east</span></a>
+              </div>
+              <p id="team-info">
+                Meet the group of people who made Technika 2022 possible...
+              </p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <!-- <div id="sponsors">
+        <h1>Sponsored by</h1>
+        <div class="flex-grid">
+          <div id="taskade" class="sponsor" onclick="loadurl('https://www.taskade.com')"></div>
+          <div class="sponsor" id="replit" onclick="loadurl('https://www.replit.com')"></div>
+          <div id="xyz" class="sponsor" onclick="loadurl('https://www.gen.xyz')"></div>
+          <div id="slingshot" class="sponsor" onclick="loadurl('https://utm.guru/udHeL')"></div>
+        </div>
+      </div> -->
+
+      <div id="footer">
+        <div class="content">
+          <div class="left">
+            <h1 class="contact_us"><a href="contactus.html">Contact Us</a></h1>
+            <div class="contacts">
+              <div>
+                <p><a target="_blank" href="tel:7838696102" class="phone">CS President - <span class="material-icons">phone</span> +91 78386 96102</a></p>
+                <p><a target="_blank" href="tel:9999287049" class="phone">Science President - <span class="material-icons">phone</span> +91 99992 87049</a></p>
+                <p><a target="_blank" href="tel:9997299898" class="phone">Maths President - <span class="material-icons">phone</span> +91 99972 99898</a></p>
+              </div>
+              <div>
+                <p><a target="_blank" href="mailto:technika2022.csi@gmail.com" class="email"><span class="material-icons">email</span> technika2022.csi@gmail.com</a></p>
+                <p><a target="_blank" href="https://discord.gg/RHHzCQxxsg" class="discord"><span class="material-icons">discord</span> Technika 2022 Official Discord Server</a></p>
+              </div>
+            </div>
+          </div>
+          <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4253.673591864003!2d77.3646397!3d28.647254099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfab05d0e1147%3A0x3d86c4165ad2e3bb!2sCAMBRIDGE%20SCHOOL-INDIRAPURAM%2C%20Shakti%20Khand%202%2C%20Indirapuram%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201014!5e1!3m2!1sen!2sin!4v1665235594976!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+      </div>
+
+      <div class="credits">
+        <h2>With ❤️ by Akshit Singh</h2>
+        <p>© Technika 2022, Cambridge School, Indirapuram. All rights reserved.</p>
+      </div>
+    </div>
+
+    
+  </div>
 </body>
 </html>

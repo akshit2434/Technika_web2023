@@ -1,0 +1,245 @@
+@media screen and (max-width: 700px) {
+  .pc {
+    display: none !important;
+  }
+  .intro {
+    font-size: 20px !important;
+    text-align: center !important;
+  }
+  #info {
+    font-size: 40px !important;
+  }
+  #info #technika {
+    font-size: 40px !important;
+  }
+  #intro-div {
+    padding: 0;
+    padding-top: 20vh;
+    flex-direction: column;
+    justify-content: unset !important;
+    text-align: center;
+  }
+  #intro-div .container {
+    max-width: 100vw !important;
+    margin: 0 !important;
+    transform: translate(0, 0) !important;
+  }
+  #intro-div #countdown_container {
+    margin: 0 !important;
+  }
+  #intro-div #countdown_container p {
+    font-size: 20px !important;
+  }
+  #intro-div #countdown_container h1 {
+    font-size: 35px !important;
+  }
+  #intro-div #countdown_container h2 {
+    font-size: 15px !important;
+  }
+  #intro-div #comingsoon {
+    font-size: 20px !important;
+  }
+  #knowmorebtn {
+    margin: 0 auto;
+    font-size: 30px !important;
+    height: 50px !important;
+    padding: 0 !important;
+  }
+  #events_indicator {
+    display: none;
+  }
+  #third-page .content {
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+  }
+  #third-page #events-grid {
+    border-radius: 20px !important;
+    max-width: 90vw !important;
+    left: 50% !important;
+    position: relative;
+    transform: translateX(-50%) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  #third-page .event-card {
+    height: 160px !important;
+    width: 120px !important;
+    border-radius: 16px !important;
+  }
+  #third-page .event-card .info {
+    padding-right: 0 !important;
+  }
+  #third-page .event-card .info h2 {
+    font-size: 12px !important;
+    margin-top: 20px !important;
+    transform: translateY(-50%) !important;
+  }
+  #third-page .event-card .info p {
+    font-size: 10px !important;
+  }
+  #navbar .logo {
+    height: 90px !important;
+    width: 90px !important;
+    margin-top: 0px;
+    margin-left: -10px;
+    margin-bottom: 5px;
+    opacity: 0.1 !important;
+  }
+  #navbar .items {
+    margin: 0;
+    width: 100vw;
+    padding: 0 20px;
+    margin-top: 45px !important;
+    align-items: center;
+  }
+  #navbar .items #home {
+    display: none;
+  }
+  #navbar .items li {
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  body {
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+  }
+  #sponsors {
+    border-radius: 30px 30px 0 0 !important;
+  }
+  #sponsors h1 {
+    font-size: 30px !important;
+  }
+  .more_info {
+    font-size: 1em !important;
+  }
+  #footer {
+    height: unset !important;
+  }
+  #footer .contacts {
+    grid-template-columns: auto !important;
+  }
+  #footer .credits h2 {
+    font-size: 0.9em !important;
+  }
+  .left {
+    float: unset !important;
+  }
+  .right {
+    position: static !important;
+    padding-top: 10px !important;
+    float: unset !important;
+    margin-top: 0 !important;
+    transform: translateY(0) !important;
+    margin-right: 0 !important;
+  }
+  #our-team {
+    height: 70vh !important;
+    width: 100vw !important;
+    background-color: rgba(222, 222, 222, 0) !important;
+    border-radius: 50px;
+    position: relative;
+    margin: 0 auto;
+    font-family: Poppins;
+    display: flex;
+    justify-content: center;
+    align-items: middle;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  #our-team::before {
+    position: absolute;
+    width: 100vw;
+    height: 800px;
+    background-color: #0f111f;
+  }
+  #our-team #ourteam_content {
+    position: relative;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+  }
+  #our-team #team-pic {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-position: center;
+    background-image: url("../assets/img/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+  }
+  #our-team .team-info {
+    position: absolute;
+    top: 55%;
+    left: 0% !important;
+    transform: translate(0.1%, -90%) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(248, 248, 248);
+    transform-style: preserve-3d;
+  }
+  #our-team .team-info #team-redirect {
+    font-size: 30px !important;
+    font-weight: bold;
+    font-family: Raleway;
+    transform: translateZ(60px);
+    background-color: rgba(0, 0, 0, 0.646);
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.5s ease;
+  }
+  #our-team .team-info #team-redirect span {
+    font-size: 30px !important;
+    transform: translateY(5px) !important;
+  }
+  #our-team .team-info #team-redirect span:hover {
+    color: black;
+  }
+  #our-team .team-info #team-redirect:hover {
+    color: rgb(11, 21, 36);
+    background-color: rgba(255, 255, 255, 0.417);
+    transform: scale(1.1) translateZ(60px);
+  }
+  #our-team .team-info #team-info {
+    font-size: 15px !important;
+    width: 90%;
+    color: rgb(222, 222, 222);
+    transform: translateZ(30px);
+    background-color: rgba(0, 25, 60, 0.625);
+    border-radius: 20px;
+    margin-top: 5px;
+  }
+  #sponsors h1 {
+    margin-bottom: 5px !important;
+  }
+  #sponsors .flex-grid {
+    flex-direction: column !important;
+    margin-left: 0 !important;
+    transform: translateX(0) !important;
+    align-items: center !important;
+    padding: 20px !important;
+  }
+  #sponsors .sponsor {
+    width: 80vw !important;
+    height: 80px !important;
+    margin: 0 !important;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #footer .content {
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+  }
+  #footer #map {
+    margin: 20px auto;
+    width: 80%;
+  }
+}/*# sourceMappingURL=index-mobile.css.map */
