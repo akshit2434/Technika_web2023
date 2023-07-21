@@ -40,9 +40,6 @@
     margin-top: 40px !important;
     align-items: center;
   }
-  #navbar .items #home {
-    display: none;
-  }
   #navbar .items li {
     display: inline-block;
     font-size: 20px;
