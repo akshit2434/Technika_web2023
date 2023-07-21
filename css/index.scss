@@ -151,7 +151,7 @@ body {
   // height: $nav-height;
   padding-bottom: 10px;
   width: 100vw;
-  text-align: center;
+  // text-align: center;
   top: 0;
   left: 0;
   z-index: 98;
@@ -169,13 +169,13 @@ body {
     background-image: url("../assets/img/logomin.png");
     height: 120px;
     width: 120px;
-    margin: 30px 0;
+    margin-top: 30px;
     background-size: contain;
     background-position: center;
     display: inline-block;
     background-repeat: no-repeat;
-    position: absolute;
-    left: 10vw;
+    position: relative;
+    left: 50px;
     cursor: pointer;
   }
 
@@ -229,12 +229,12 @@ body {
       margin: 0 0;
       // height:100vh;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       .container {
         padding: 30px;
         // transform: translateY(-40px);
-        margin-left: 10vw;
+        // margin-left: 10vw;
         vertical-align: middle;
         // margin-left: 5vw;
         // height: 40vh;
@@ -388,7 +388,7 @@ body {
         padding: 70px 70px;
         // padding-top:0px;
         // border-radius: 25px;
-        margin-right: 100px;
+        // margin-right: 100px;
 
         // position: absolute;
         // float: right;
