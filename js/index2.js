@@ -50,7 +50,7 @@ $(document).ready(function () {
         .deleteChars(8)
         .typeString("<span id='technika' class='long'>Decode, Derivate, Discover!</span>")
         .pauseFor(1000)
-        .deleteChars("Decode, Derivate, Disscover!".length)
+        .deleteChars("Decode, Derivate, Discover!".length)
         .typeString("<span id='technika'><span class='bounce'>T</span><span class='bounce'>E</span><span class='bounce'>C</span><span class='bounce'>H</span><span class='bounce'>N</span><span class='bounce'>I</span><span class='bounce'>K</span><span class='bounce'>A</span><span class='bounce'>!</span></span>")
         .start()
 
