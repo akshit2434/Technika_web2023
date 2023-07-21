@@ -34,7 +34,8 @@ $padding-leftright: 100px;
             transform: translate(0, 0) !important;
         }
         #countdown_container {
-            margin: 0 !important;
+            margin: 0 15px !important;
+            padding: 30px !important;
             p {
                 font-size: 20px !important;
             }
@@ -86,12 +87,12 @@ $padding-leftright: 100px;
             .info {
                 padding-right: 0 !important;
                 h2 {
-                    font-size: (30px * 0.4) !important;
+                    font-size: 20px !important;
                     margin-top: (50px * 0.4) !important;
                     transform: translateY(-50%) !important;
                 }
                 p {
-                    font-size: 10px !important;
+                    font-size: 15px !important;
                     height:65px !important;
                 }
             }
