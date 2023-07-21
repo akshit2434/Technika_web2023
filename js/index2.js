@@ -167,7 +167,7 @@ function openModal(heading, text){
 
 
 function init() {
-    const star = new THREE.TextureLoader().load('../assets/img/star.png');
+    const star = new THREE.TextureLoader().load('./assets/img/star.png');
 
     //setup camera
     camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 2, 2000);
