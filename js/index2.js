@@ -48,9 +48,9 @@ $(document).ready(function () {
         .typeString("<span id='technika'>Technika</span>")
         .pauseFor(1000)
         .deleteChars(8)
-        .typeString("<span id='technika'>#thriveIT</span>")
+        .typeString("<span id='technika' class='long'>Decode, Derivate, Discover!</span>")
         .pauseFor(1000)
-        .deleteChars("#thriveIT".length)
+        .deleteChars("Decode, Derivate, Disscover!".length)
         .typeString("<span id='technika'><span class='bounce'>T</span><span class='bounce'>E</span><span class='bounce'>C</span><span class='bounce'>H</span><span class='bounce'>N</span><span class='bounce'>I</span><span class='bounce'>K</span><span class='bounce'>A</span><span class='bounce'>!</span></span>")
         .start()
 
@@ -63,7 +63,7 @@ $(document).ready(function () {
         setTimeout(function(){$("#loader").fadeOut();}, 1000)
     },1000);
 
-    $(".info").hover(function(){$(this).css("overflow","scroll");$(this).css("overflow-x","hidden");$(this).css("padding-right","0px")},function(){$(this).css("overflow","hidden");$(this).scrollTop(0);$(this).css("padding-right","10px")})
+    $(".event-card.card-1 .info").hover(function(){$(this).css("overflow","scroll");$(this).css("overflow-x","hidden");$(this).css("padding-right","0px")},function(){$(this).css("overflow","hidden");$(this).scrollTop(0);$(this).css("padding-right","10px")})
 
 });
 
@@ -113,13 +113,13 @@ if (!hasTouch || isPC){
     secondpage_tl.from("#info_grid", {x:200, opacity:0, duration:2,ease: "power4.out"})
 }
 // secondpage_tl.from("#events_heading", {y:50, opacity:0, duration:2, ease: "expo.out"}, "-=1");
-secondpage_tl.from(".hamburger-menu", {
-    scrollTrigger:{
-        scrub:true,
-        trigger: ".ocean",
-        start:"top center",
-        once:false,
-    },x:-50, opacity:0,ease:"power3.out", duration:0.1})
+// secondpage_tl.from(".hamburger-menu", {
+//     scrollTrigger:{
+//         scrub:true,
+//         trigger: ".ocean",
+//         start:"top center",
+//         once:false,
+//     },x:-50, opacity:0,ease:"power3.out", duration:0.1})
 
 secondpage_tl.to("#navbar", { duration:2,ease: "power4.out"},"-=1.5")
 
@@ -128,21 +128,21 @@ if (isPC){
         
     secondpage_tl.to(".logo", {scrollTrigger:{
         scrub:true,
-        // trigger: ".ocean",
-        start:"center center",
+        trigger: ".ocean",
+        start:"top center",
         once:false,
     }, duration:.5, height:"90px", width:"90px",marginTop:"10px", ease: "power3.out"})
 }
 secondpage_tl.to(".items", {scrollTrigger:{
     scrub:true,
-    // trigger: ".ocean",
-    start:"center center",
+    trigger: ".ocean",
+    start:"top center",
     once:false,
 }, duration:.5, color:"black", marginTop:"55px", ease: "power3.out"})
 secondpage_tl.to("#navbar", {scrollTrigger:{
     scrub:true,
-    // trigger: ".ocean",
-    start:"center center",
+    trigger: ".ocean",
+    start:"top center",
     once:false,
 }, duration:.5, backgroundColor:"rgba(0,0,0,0.2)",ease: "power3.out"})
 
@@ -176,6 +176,7 @@ function init() {
     //setup scene
     scene = new THREE.Scene();
     scene.background = new THREE.Color( 0x344966 );
+    // scene.background = new THREE.Color( 0x2d6a4f);
     scene.fog = new THREE.FogExp2(0x344966, 0.001);
 
     //Geometries
@@ -214,9 +215,9 @@ function init() {
 
     }
 
-    pointLight = new THREE.DirectionalLight(0xffffff, 5);
-    pointLight.position.set(1, 3, 1200);
-    scene.add(pointLight);
+    // pointLight = new THREE.DirectionalLight(0xffffff, 5);
+    // pointLight.position.set(1, 3, 1200);
+    // scene.add(pointLight);
 
     star_geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
     particles = new THREE.Points(star_geometry, star_material);
@@ -237,7 +238,6 @@ function init() {
     renderer.setPixelRatio(Math.round( $(window).width() / ($(window).height()+100) ));
     renderer.setSize($(window).width(), $(window).height()+100);
 
-    //
 
     // document.body.style.touchAction = 'none';
     document.body.addEventListener('pointermove', onPointerMove);
@@ -274,9 +274,7 @@ function onPointerMove(event) {
 function animate() {
 
     requestAnimationFrame(animate);
-
     render();
-
 
 }
 
@@ -302,7 +300,7 @@ function render() {
 
 function brochure(id){
     if(!hasTouch()){
-        open(window.location.href.split("/").splice(0,window.location.href.split("/").length-1).join("/")+"/assets/TECHNIKA CSI BROCHURE.pdf#page="+id);
+        open(window.location.href.split("/").splice(0,window.location.href.split("/").length-1).join("/")+"/assets/brochure.pdf#page="+id);
     }
 }
 
@@ -324,7 +322,7 @@ function hasTouch() {
   }
 
 function countdown()  {
-    const countDate = new Date("October 19, 2022, 00:00:00").getTime();
+    const countDate = new Date("August 22, 2023, 09:00:00").getTime();
     const now = new Date().getTime();
     const gap = countDate - now;
 
@@ -333,10 +331,10 @@ function countdown()  {
     const hour = minute * 60;
     const day = hour * 24;
 
-    var textDay = Math.floor(gap/day);
-    var textHour = Math.floor((gap%day)/hour);
-    var textMinute = Math.floor((gap%hour)/minute);
-    var textSecond = Math.floor((gap%minute)/second);
+    var textDay = Math.max(0,Math.floor(gap/day));
+    var textHour = Math.max(0,Math.floor((gap%day)/hour));
+    var textMinute = Math.max(0,Math.floor((gap%hour)/minute));
+    var textSecond = Math.max(0,Math.floor((gap%minute)/second));
 
     if(textDay < 10) textDay = "0"+ textDay;
     if(textHour < 10) textHour = "0"+textHour;

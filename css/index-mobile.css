@@ -48,23 +48,16 @@
   #events_indicator {
     display: none;
   }
-  #third-page .content {
-    margin: 0 0 20px 0 !important;
-    padding: 0 !important;
-  }
   #third-page #events-grid {
     border-radius: 20px !important;
-    max-width: 90vw !important;
-    left: 50% !important;
     position: relative;
-    transform: translateX(-50%) !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
   #third-page .event-card {
-    height: 160px !important;
-    width: 120px !important;
+    width: 80% !important;
     border-radius: 16px !important;
+    display: inline-block !important;
   }
   #third-page .event-card .info {
     padding-right: 0 !important;
@@ -76,6 +69,10 @@
   }
   #third-page .event-card .info p {
     font-size: 10px !important;
+    height: 65px !important;
+  }
+  #third-page .event-card.card-2 {
+    padding: 1em !important;
   }
   #navbar .logo {
     height: 90px !important;
@@ -241,5 +238,9 @@
   #footer #map {
     margin: 20px auto;
     width: 80%;
+  }
+  #third-page .content {
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }/*# sourceMappingURL=index-mobile.css.map */
