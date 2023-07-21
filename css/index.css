@@ -1030,4 +1030,26 @@ body {
 .credits p {
   margin-top: 10px;
   color: #c0c0c0;
+}
+
+@media screen and (min-width: 700px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #c5c5c5;
+    outline-offset: -2px;
+    -webkit-transition: 0.2 ease;
+    transition: 0.2 ease;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #909090;
+  }
+  .event-card.style-1 .info p {
+    font-size: 13px !important;
+  }
 }/*# sourceMappingURL=index.css.map */
