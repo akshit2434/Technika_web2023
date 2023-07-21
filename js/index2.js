@@ -300,7 +300,7 @@ function render() {
 
 function brochure(id){
     if(!hasTouch()){
-        open(window.location.href.split("/").splice(0,window.location.href.split("/").length-1).join("/")+"/assets/brochure.pdf#page="+id);
+        open("./assets/brochure.pdf#page="+id);
     }
 }
 
