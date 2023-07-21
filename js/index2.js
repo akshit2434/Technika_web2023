@@ -47,7 +47,7 @@ $(document).ready(function () {
         .pauseFor(1500)
         .typeString("<span id='technika'>Technika</span>")
         .pauseFor(1000)
-        .deleteChars(8)
+        .deleteChars("Technika".length)
         .typeString("<span id='technika' class='long'>Decode, Derivate, Discover!</span>")
         .pauseFor(1000)
         .deleteChars("Decode, Derivate, Discover!".length)
@@ -81,24 +81,24 @@ var spwave_previous_marginTop = $("#after-wave").css("margin-top");
 (spwave_previous_marginTop==null) ? spwave_previous_marginTop=0 : spwave_previous_marginTop = parseInt(spwave_previous_marginTop.substring(0,spwave_previous_marginTop.length-2));
 (introdiv_previous_marginTop==null) ? intro_previous_marginTop=0 : introdiv_previous_marginTop = parseInt(introdiv_previous_marginTop.substring(0,introdiv_previous_marginTop.length-2));
 
-var maxvalY = 0;
+// var maxvalY = 0;
 //Paralax ish stuff
-window.addEventListener("scroll", function(){
-    var valX = window.scrollX;
-    var valY = window.scrollY;
-    var scrolledPercentage = valY/$(window).height();
-    // -127.65
-    // console.log(valY/$(window).height())
-    // 
-    // $(".hamburger-menu").css("margin-top",30+valY);
-    if (valY > maxvalY) maxvalY=valY;
-    if (isPC){
-        // spwave.style.marginTop = (spwave_previous_marginTop + (-valY*0.25))+'px';
-        introdiv.style.marginTop = (introdiv_previous_marginTop + (-valY*0.25))+'px';
-    }else{
-        $("#second-page").css("margin-top", 0);
-    }
-})
+// window.addEventListener("scroll", function(){
+//     var valX = window.scrollX;
+//     var valY = window.scrollY;
+//     var scrolledPercentage = valY/$(window).height();
+//     // -127.65
+//     // console.log(valY/$(window).height())
+//     // 
+//     // $(".hamburger-menu").css("margin-top",30+valY);
+//     if (valY > maxvalY) maxvalY=valY;
+//     if (isPC){
+//         // spwave.style.marginTop = (spwave_previous_marginTop + (-valY*0.25))+'px';
+//         introdiv.style.marginTop = (introdiv_previous_marginTop + (-valY*0.25))+'px';
+//     }else{
+//         $("#second-page").css("margin-top", 0);
+//     }
+// })
 
 let secondpage_tl = gsap.timeline({
     scrollTrigger: {

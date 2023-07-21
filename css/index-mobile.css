@@ -226,7 +226,7 @@
     margin-bottom: 20px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   #footer .content {
     flex-direction: column;
     justify-content: center;
@@ -237,8 +237,13 @@
     margin: 20px auto;
     width: 80%;
   }
-  #third-page .content {
-    margin: 0 !important;
-    padding: 0 !important;
+  #info {
+    margin-top: -10px !important;
+  }
+  #technika {
+    font-size: 60px !important;
+  }
+  #technika.long {
+    font-size: 40px !important;
   }
 }/*# sourceMappingURL=index-mobile.css.map */
