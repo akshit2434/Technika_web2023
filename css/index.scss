@@ -152,6 +152,7 @@ body {
 
 #navbar {
   position: fixed;
+  z-index: 10 !important;
   // position: sticky;
   // height: $nav-height;
   padding-bottom: 10px;
@@ -233,7 +234,7 @@ body {
     // border:2px solid beige;
     position: relative;
     width: 100vw;
-    height: 100%;
+    height: 85%;
     vertical-align:middle;
     // padding-top:50px;
     margin: 0 0;
@@ -254,7 +255,8 @@ body {
       justify-content: space-between;
       z-index: 10;
       // position: absolute;
-      max-width: 60vw;
+      width: 60vw;
+
       // position: fixed;
 
       align-items: middle;
@@ -354,11 +356,13 @@ body {
     }
 
     #countdown_container {
+      z-index: 5 !important;
       background-color: #011522af;
       border-radius: 8px;
       font-family: "spacemono", monospace;
       backdrop-filter: blur(5px);
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      width: 600px; 
       .tools {
         // transform: translate(-30px,-30px);
         display: flex;
@@ -416,6 +420,7 @@ body {
         color: #fffcf9;
         font-size: 3rem;
         margin-bottom: 25px;
+        white-space: normal !important; 
         
       }
 

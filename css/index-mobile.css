@@ -12,19 +12,39 @@
   #info #technika {
     font-size: 40px !important;
   }
+  .ocean {
+    display: none;
+  }
+  #first-page {
+    height: 95vh !important;
+  }
+  #third-page {
+    border-radius: 20px 20px 0 0;
+  }
+  .bgstars {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-image: url("assets/img/bgstars.png");
+    top: 0;
+    left: 0;
+  }
   #intro-div {
     padding: 0;
-    padding-top: 20vh;
-    flex-direction: column;
-    justify-content: unset !important;
+    height: 100% !important;
+    flex-direction: column-reverse;
+    justify-content: space-around !important;
     text-align: center;
   }
   #intro-div .container {
-    max-width: 100vw !important;
+    width: 100vw !important;
     margin: 0 !important;
     transform: translate(0, 0) !important;
   }
   #intro-div #countdown_container {
+    width: calc(100vw - 50px) !important;
     margin: 0 15px !important;
     padding: 30px !important;
   }
@@ -48,6 +68,11 @@
   }
   #events_indicator {
     display: none;
+  }
+  #third-page .content {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   #third-page #events-grid {
     border-radius: 20px !important;
@@ -82,6 +107,7 @@
     margin-left: -10px;
     margin-bottom: 5px;
     opacity: 0.1 !important;
+    position: absolute;
   }
   #navbar .items {
     margin: 0;
@@ -245,5 +271,26 @@
   }
   #technika.long {
     font-size: 40px !important;
+  }
+  #countdown_container {
+    padding: 30px !important;
+    width: 400px !important;
+    text-align: center !important;
+  }
+  #countdown_container .tools {
+    top: 0 !important;
+    left: 0 !important;
+  }
+  #countdown_container h1 {
+    font-size: 2rem !important;
+  }
+  #countdown_container h2 {
+    font-size: 1.1rem !important;
+  }
+  #countdown_container p {
+    font-size: 1rem !important;
+  }
+  #countdown_container #countdown p {
+    font-size: 2rem !important;
   }
 }/*# sourceMappingURL=index-mobile.css.map */

@@ -126,6 +126,7 @@ body {
 
 #navbar {
   position: fixed;
+  z-index: 10 !important;
   padding-bottom: 10px;
   width: 100vw;
   top: 0;
@@ -189,7 +190,7 @@ body {
 #first-page #intro-div {
   position: relative;
   width: 100vw;
-  height: 100%;
+  height: 85%;
   vertical-align: middle;
   margin: 0 0;
   display: flex;
@@ -203,7 +204,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   z-index: 10;
-  max-width: 60vw;
+  width: 60vw;
   align-items: middle;
 }
 #first-page #intro-div .container .intro {
@@ -288,12 +289,14 @@ body {
   display: table-cell;
 }
 #first-page #intro-div #countdown_container {
+  z-index: 5 !important;
   background-color: rgba(1, 21, 34, 0.6862745098);
   border-radius: 8px;
   font-family: "spacemono", monospace;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  width: 600px;
   padding: 70px 70px;
   z-index: 99;
   font-family: "Space Mono", monospace;
@@ -335,6 +338,7 @@ body {
   color: #fffcf9;
   font-size: 3rem;
   margin-bottom: 25px;
+  white-space: normal !important;
 }
 #first-page #intro-div #countdown_container #countdown {
   display: flex;
