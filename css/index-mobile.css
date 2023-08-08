@@ -252,7 +252,7 @@
     margin-bottom: 20px;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1290px) {
   #footer .content {
     flex-direction: column;
     justify-content: center;
@@ -271,6 +271,9 @@
   }
   #technika.long {
     font-size: 40px !important;
+  }
+  .Typewriter__cursor {
+    font-size: 60px !important;
   }
   #countdown_container {
     padding: 30px !important;
